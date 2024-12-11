@@ -1,0 +1,20 @@
+name: C++ CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install C++
+      run: sudo apt-get install g++ -y
+
+    - name: Compile C++ code
+      run: g++ ConsoleApplication7.cpp -o main
+
+    - name: Run program
+      run: ./main
