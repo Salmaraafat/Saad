@@ -15,6 +15,6 @@ jobs:
     - name: Install C++
       run: sudo apt-get install g++ -y
     - name: Compile C++ code
-      run: g++ main.cpp -o main
+      run: g++ ConsoleApplication7.cpp -o main
     - name: Run program
       run: ./main
